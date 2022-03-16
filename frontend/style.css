@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro&display=swap');
+
+:root {
+  --accent: #0000ff;
+  --danger: #ff0000;
+}
+@media (prefers-color-scheme: dark) {
+	:root{
+		--input-hover: #555;
+		--background: #111;
+		--foreground: #eee;
+		--input: #333;
+	}
+}
+@media (prefers-color-scheme: light) {
+	:root{
+		--input-hover: #aaa;
+		--background: #eee;
+		--foreground: #111;
+		--input: #ccc;
+	}
+}
+
+html{
+	background-color:#000;
+}
+
+body{
+	margin: 0;
+	position: absolute;
+	top: 32px;
+	right: 50%;
+	transform: translate(50%,0);
+	width: 544px;
+	box-shadow: 0 0 32px #ccc;
+	max-width:480px;
+	border-radius: 32px;
+	padding:32px;
+	background-color: var(--background);
+	color: var(--foreground);
+}
+
+*{
+	font-family: 'Readex Pro', sans-serif;
+	border: 0px;
+}
+
+#back, #logout{
+	padding:0;
+	margin:0;
+	position:absolute;
+	top:19px;
+	left:32px;
+	font-size: 3em;
+}
+
+#logout > a:hover{
+	color:var(--danger);
+}
+
+#back > a:hover, #logo > a:hover{
+	color:var(--input-hover);
+}
+
+#logo{
+	padding:0;
+	margin:0;
+	text-align:center;
+}
+
+input{
+	width:calc(100% - 4px);
+	padding:2px;
+}
+
+#url{
+	height:40px;
+	border-radius: 20px;
+	padding: 16px;
+	width: auto;
+	margin: 0;
+}
+
+#url{
+	background-color: var(--input);
+	color: var(--foreground);
+}
+
+button{
+	height:40px;
+	border-radius: 20px;
+	padding: 0 16px;
+	background-color: var(--input);
+	color: var(--foreground);
+}
+
+#url:hover, #url:active, #url:focus, button:hover, button:active, button:focus{
+	background-color:var(--input-hover);
+}
+
+button:hover, button:active, button:focus{
+	border:0;
+}
+
+#video > *{
+	margin: 32px 8px 0;
+}
+
+iframe{
+	margin: 0 !important;
+}
+
+a {
+  text-decoration: none;
+}
+
+a, a:visited, a:active {
+	color: var(--foreground);
+}
+
+#favouritesToggle{
+	margin-top: 32px;
+}
